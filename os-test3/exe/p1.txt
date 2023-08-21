@@ -1,0 +1,27 @@
+///////////////////////////////////////////////////////
+.stack 
+// int maxCount, sum, count;
+// char prtBuffer[5];
+size = 4
+///////////////////////////////////////////////////////
+.code
+newh 4
+ldv 0
+sta 1024
+ldv 0
+sta 0
+loof
+lda 0
+add 1
+sta 0
+adda 1024
+sta 1024
+lda 0
+cmp 10
+jmz loof
+prt 1024
+lda 1024
+diva 0
+sta 1024
+prt 1024
+halt

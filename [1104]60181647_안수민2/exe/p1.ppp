@@ -1,0 +1,34 @@
+.stack
+// int maxCount, sum, count;
+// char prtBuffer[5]
+size = 24
+
+.code
+// sti maxCount 10
+sti 0, 10
+// sti sum 0
+sti 4, 0
+// sti count = 0
+sti 8, 0
+
+// sta prtBuffer "test"
+sti 12, "test"
+// intr 8, prtbuffer
+intr 8, 12
+
+// label 
+loop:
+// AC = count
+lda 8
+// AC = AC + 1
+addi 1
+// count = AC
+sta 8
+// 0 - count
+cmp 0
+//if (maxCount>count) go to loop
+igz loop
+
+// exit
+halt
+
